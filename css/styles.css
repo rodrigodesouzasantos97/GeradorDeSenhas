@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comfortaa", sans-serif;
+}
+
+:root{
+    --gradient-color-first: #aa381b;
+    --gradient-color-second: #ac5d21;
+    --container-color: #e7e7e7;
+    --button-color: #585858;
+}
+
+body{
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: linear-gradient(to bottom, var(--gradient-color-first), var(--gradient-color-second));
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--container-color);
+    padding: 2rem;
+    border-radius: 5px;
+    width: 450px;
+}
+
+#title{
+    margin-bottom: 2rem;
+}
+
+#generate-password-btn{
+    padding: 1rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--container-color);
+    transition: 0.5s;
+}
+
+#generate-password-btn:hover{
+    opacity: 0.85;
+}
+
+#password-container{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--gradient-color-second);
+    padding: 1rem;
+    width: 300px;
+    height: 150px;
+    transition: 0.5s;
+}
+
+#password-container h2{
+    margin-bottom: 1rem;
+    color: var(--gradient-color-first);
+    font-size: 22px;
+}
+
+#password{
+    font-size: 20px;
+}
+
+#container .hide{
+    display: none;
+}
