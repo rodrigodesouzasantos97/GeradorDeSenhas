@@ -52,11 +52,11 @@ function generatePassword() {
 function copyValue(text) {
   navigator.clipboard.writeText(text).then(() => {
     copyPasswordBtn.innerText = "Copiado!";
-    copyPasswordBtn.classList.add("copyed")
+    copyPasswordBtn.classList.add("copied")
     
     setTimeout(() => {
       copyPasswordBtn.innerText = "Copiar";
-      copyPasswordBtn.classList.remove("copyed")
+      copyPasswordBtn.classList.remove("copied")
     }, 1000);
   });
 }

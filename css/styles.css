@@ -132,6 +132,6 @@ body {
   display: none;
 }
 
-#container .copyed{
+#container .copied{
   background-color: var(--gradient-color-second);
 }
