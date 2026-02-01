@@ -1,79 +1,137 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Comfortaa", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comfortaa", sans-serif;
 }
 
-:root{
-    --gradient-color-first: #aa381b;
-    --gradient-color-second: #ac5d21;
-    --container-color: #e7e7e7;
-    --button-color: #585858;
+:root {
+  --gradient-color-first: #aa381b;
+  --gradient-color-second: #ac5d21;
+  --container-color: #e7e7e7;
+  --button-color: #585858;
 }
 
-body{
-   height: 100vh;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   background: linear-gradient(to bottom, var(--gradient-color-first), var(--gradient-color-second));
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to bottom,
+    var(--gradient-color-first),
+    var(--gradient-color-second)
+  );
 }
 
-#container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--container-color);
-    padding: 2rem;
-    border-radius: 5px;
-    width: 450px;
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--container-color);
+  padding: 2rem;
+  border-radius: 5px;
+  width: 450px;
 }
 
-#title{
-    margin-bottom: 2rem;
+#title {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--button-color);
 }
 
-#generate-password-btn{
-    padding: 1rem 1rem;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--button-color);
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
-    color: var(--container-color);
-    transition: 0.5s;
+#password-options-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
 }
 
-#generate-password-btn:hover{
-    opacity: 0.85;
+#password-options-form p {
+  margin-bottom: 1rem;
+  font-style: italic;
+  color: var(--button-color);
 }
 
-#password-container{
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid var(--gradient-color-second);
-    padding: 1rem;
-    width: 300px;
-    height: 150px;
-    transition: 0.5s;
+.form-option {
+  margin-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-#password-container h2{
-    margin-bottom: 1rem;
-    color: var(--gradient-color-first);
-    font-size: 22px;
+.form-option input {
+  margin-right: 12px;
 }
 
-#password{
-    font-size: 20px;
+.form-option input[type="number"] {
+  margin: 0;
+  width: 40px;
+  border: none;
+  border-bottom: 1px solid var(--button-color);
+  background-color: transparent;
+  text-align: center;
 }
 
-#container .hide{
-    display: none;
+.form-option input[type="number"]:focus {
+  outline: none;
+}
+
+.form-option input[type="number"]::-webkit-inner-spin-button,
+.form-option input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+#generate-password-btn,
+#copy-password-btn {
+  padding: 1rem 1rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--button-color);
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--container-color);
+  transition: 0.5s;
+}
+
+#generate-password-btn:hover,
+#copy-password-btn:hover {
+  opacity: 0.85;
+}
+
+#password-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--button-color);
+  padding: 1rem;
+  width: 350px;
+  height: 250px;
+  transition: 0.5s;
+}
+
+#password-container p {
+  margin-bottom: 1rem;
+  color: var(--gradient-color-first);
+  font-size: 22px;
+}
+
+#password {
+  font-size: 20px;
+  word-break: break-word;
+  text-align: center;
+}
+
+#container .hide {
+  display: none;
+}
+
+#container .copyed{
+  background-color: var(--gradient-color-second);
 }
